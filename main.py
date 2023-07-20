@@ -42,6 +42,18 @@ STRIKES_WORDS = {
 
 
 def determine_winner(energy_p1, energy_p2):
+    """
+    Determines the winner of the fight based on the remaining energy of each player.
+
+    Args:
+        energy_p1 (int): The remaining energy points of player 1.
+        energy_p2 (int): The remaining energy points of player 2.
+
+    Returns:
+        str: A string indicating the result of the fight. It will be one of the following:
+            - "{character_name} wins." (if a character has less than or equal to 0 energy)
+            - "The fight ends in a draw." (if both characters have more than 0 energy)
+    """
 
     winner = ARNALDOR if energy_p1 <= 0 else TONYN if energy_p2 <= 0 else None
 
@@ -52,6 +64,20 @@ def determine_winner(energy_p1, energy_p2):
 
 
 def execute_strike(character, movement, strike):
+    """
+    Executes a strike for the given character based on the provided movement and strike inputs.
+
+    Args:
+        character (str): The name of the character performing the strike.
+        movement (str): The movement input for the character (e.g., "DSD", "SA").
+        strike (str): The strike input for the character (e.g., "P", "K").
+
+    Returns:
+        tuple: A tuple containing the narration of the action and the energy cost of the strike.
+            The narration describes the action taken by the character, and the energy cost
+            represents the amount of energy consumed by the strike action.
+    """
+    
     energy = 0
     narration = ""
 
@@ -71,6 +97,16 @@ def execute_strike(character, movement, strike):
 
 
 def narrate_fight(fight_json):
+    """
+    Narrates the fight between two characters, TONYN and ARNALDOR, based on their actions.
+
+    Args:
+        fight_json (dict): A dictionary containing the actions of player 1 and player 2.
+
+    Returns:
+        str: A string containing the narrative of the fight and the final result.
+    """
+
     try:
         fight_json = json.loads(fight_json)
     except Exception as e:

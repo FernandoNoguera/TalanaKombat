@@ -48,3 +48,22 @@ def determine_winner(energy_p1, energy_p2):
     else:
         return "La pelea ha terminado en un empate."
 
+
+def execute_strike(character, movement, strike):
+    energy = 0
+    narration = ""
+
+    if character in CHARACTER_ACTIONS:
+        action_key = (movement, strike)
+        if action_key in CHARACTER_ACTIONS[character]:
+            action, energy = CHARACTER_ACTIONS[character][action_key]
+            narration = f"{character} usa {action}"
+        elif movement in MOVEMENTS:
+            narration = f"{character} se mueve hacia  {MOVEMENTS_WORDS[movement]}"
+            energy = 0
+        elif strike in STRIKES:
+            narration = f"{character} usa {STRIKES_WORDS[strike]}"
+            energy = 1
+
+    return narration, energy
+

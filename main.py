@@ -39,4 +39,12 @@ STRIKES_WORDS = {
 }
 
 
-print("hello world!")
+def determine_winner(energy_p1, energy_p2):
+
+    winner = ARNALDOR if energy_p1 <= 0 else TONYN if energy_p2 <= 0 else None
+
+    if winner:
+        return f"{winner} gana la pelea."
+    else:
+        return "La pelea ha terminado en un empate."
+

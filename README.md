@@ -22,6 +22,7 @@ git checkout develop
 ```
 
 4. Usar con docker o python
+
 Docker:
 ```
 docker build --tag talana . && docker run -it talana

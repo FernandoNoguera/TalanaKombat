@@ -1,9 +1,10 @@
 # Talana Kombat
 
 ## Descripción
-este proyecto es una prueba tecnica de talana llamada Talana Kombat JRPG es un emocionante juego de combate en el que dos personajes se enfrentan en un duelo mortal. Cada luchador puede ejecutar poderosos golpes especiales mediante combinaciones de movimientos y botones de golpe.
+este proyecto es una prueba tecnica de talana llamada Talana Kombat JRPG es un emocionante juego de combate en el que dos personajes se enfrentan en un duelo mortal. 
+Cada luchador puede ejecutar poderosos golpes especiales mediante combinaciones de movimientos y botones de golpe.
 
-## Pre-requisitos 📋
+## Pre-requisitos
 
 -   Docker 19.03^
 

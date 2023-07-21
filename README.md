@@ -27,7 +27,7 @@ Docker:
 docker build --tag talana . && docker run -it talana
 ```
 
-python:
+o python:
 ```
 python main.py
 ```
